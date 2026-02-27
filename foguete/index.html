@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Jogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="menu" class="screen">
+            <h1>MEU JOGO</h1>
+            <button onclick="startGame()">Jogar</button>
+        </div>
+    </header>
+    <main>
+        <!-- JOGO -->
+        <div id="game" class="screen" style="display: none;">
+            <h1>JOGO INICIADO</h1>
+            <div class="todo">
+                <div class="centro">
+
+                </div>
+                <div class="lado esquerdo">
+
+                </div>
+                <div class="lado direito">
+
+                </div>
+            </div>
+
+            <button onclick="goToMenu()">Voltar ao Menu</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
