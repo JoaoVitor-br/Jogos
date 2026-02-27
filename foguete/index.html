@@ -5,36 +5,61 @@
     <meta charset="UTF-8">
     <title>Meu Jogo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jogo.css">
 </head>
 
 <body>
-
     <header>
         <div class="menu" id="menu" class="screen">
-            <h1>MEU JOGO</h1>
+            <h1>Mulheres que transformaram a tecnologia</h1>
             <button onclick="startGame()">Jogar</button>
+            <p>Feito: Emily Gonçalves Dias, Isabela Matos Serafim, João Vitor Amorim de Oliveira, Vinicius Magalhães
+                Morais</p>  
+            <img src="imagens/Mulher_icone.jpg"> 
+
         </div>
     </header>
     <main>
+
+
+
         <!-- JOGO -->
         <div id="game" class="screen" style="display: none;">
-            <h1>JOGO INICIADO</h1>
+
             <div class="todo">
-                <div class="centro">
 
-                </div>
                 <div class="lado esquerdo">
+                    <button>Enviar informações</button>
+                    <button>Arrumar tanque</button>
+                    <button>Arrumar Temperatura</button>
+                </div>
+                <div class="lado centro">
 
+
+                    <img src="imagens/foguete.png" alt="nosssaa" id="foguete">
+                  
                 </div>
                 <div class="lado direito">
-
+                    <div class="detale">
+                        <p>Gasolina</p>
+                        <h2 class="Informacao_da_tela">69</h2>
+                    </div>
+                    <div class="detale">
+                        <p>Temperatura</p>
+                        <h2 class="Informacao_da_tela">69</h2>
+                    </div>
                 </div>
             </div>
 
-            <button onclick="goToMenu()">Voltar ao Menu</button>
+
         </div>
     </main>
     <script src="script.js"></script>
 </body>
 
 </html>
+
+
+
+
+<!-- <button onclick="goToMenu()">Voltar ao Menu</button> -->

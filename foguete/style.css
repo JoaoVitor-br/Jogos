@@ -4,11 +4,12 @@
     padding: 0;
 }
 
+
 body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(45deg, #1e1e2f, #3a3a6a);
     display: flex;
+    background: linear-gradient(#450050,#e753fe);
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
@@ -20,21 +21,32 @@ header{
     align-items: center;
     font-family: Arial, sans-serif;
     color: white;
-    height: 99vh;
+    
+    height: 100vh;
+    width: 100vw;
+    border: 3px solid blue;
     border: 0;
+    background-image: url(imagems/menu.png);
+    background-position: center;    
 }
 .screen {
     text-align: center;
 }
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+}
 
 button {
     display: block;
-    width: 200px;
+    width: 250px;
     margin: 15px auto;
     padding: 15px;
-    font-size: 18px;
-    background-color: #ff4757;
-    color: white;
+    font-size: 25px;
+    background-color: white;
+    color:#c400ff ;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -44,4 +56,62 @@ button {
 button:hover {
     background-color: #ff6b81;
     transform: scale(1.1);
+}
+.todo{
+    height: 99vh;
+}
+.lado {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.detale{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 3px solid rgb(43, 43, 43);
+    background-color: gray;
+    font-size: 30px;
+    border-radius: 12px;
+    padding: 0 5px;
+}
+.Informacao_da_tela{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: antiquewhite;
+}
+@keyframes shake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(-5px, 0px) rotate(-2deg); }
+  40% { transform: translate(5px, 0px) rotate(2deg); }
+  60% { transform: translate(-5px, 0px) rotate(-2deg); }
+  80% { transform: translate(5px, 0px) rotate(2deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+#foguete{
+    animation: shake 0.5s infinite;
+}
+.centro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  animation: mudarCor 600s linear forwards;
+}
+@keyframes mudarCor {
+  from {
+    background-color: #7bd3f7;
+  }
+  to {
+    background-color: #191970;
+  }
+}
+
+@font-face {
+  font-family: "Electrowave";
+  src: url("fontes/electro_wave_vol_2/Electro Wave Vol.2_Free.ttf")
+}
+
+h1{
+  font-family: "Electrowave";
+  font-size: 100px;
+  align-items: center;
 }
