@@ -18,7 +18,6 @@ console.log(tempo)
 
 function startGame() {
     document.getElementById("menu").style.display = "none";
-
     document.getElementById("game").style.display = "block";
     document.querySelector("header").style.width = "0vw"
     document.querySelector("header").style.height = "0vh"

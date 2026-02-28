@@ -1,0 +1,18 @@
+.cube{
+    height: 50px;
+    width: 50px;
+    display:inline;
+    float:left;
+    background-color: rgb(23, 155, 6);
+}
+body{
+    text-align: center;
+    background-image: url(imagens/tela.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

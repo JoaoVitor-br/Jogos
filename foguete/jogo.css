@@ -1,6 +1,6 @@
 .todo {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 90vw;
     grid-template-areas:
         "esquerda meio dereita";
@@ -8,17 +8,14 @@
 
 .esquerdo {
     grid-area: esquerda;
-    border: 1px solid rgb(209, 9, 209);
 }
 
 .direito {
     grid-area: dereita;
-    border: 1px solid rgb(221, 59, 59);
 
 }
 
 .centro {
     grid-area: meio;
-    border: 1px solid rgb(41, 6, 238);
-
 }
+
