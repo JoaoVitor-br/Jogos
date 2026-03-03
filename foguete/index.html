@@ -11,8 +11,8 @@
 <body>
     <header>
         <div class="menu" id="menu" class="screen">
-            <h1>Mulheres que transformaram a tecnologia</h1>
-            <button onclick="startGame()">Jogar</button>
+            <h1 class="titulo">Mulheres que transformaram a tecnologia</h1>
+            <button id="startGame">Jogar</button>
             <p>Feito: Emily Gonçalves Dias, Isabela Matos Serafim, João Vitor Amorim de Oliveira, Vinicius Magalhães
                 Morais</p>
             <!-- <img src="imagens/Mulher_icone.jpg">  -->
@@ -52,12 +52,18 @@
                     </div>
                 </div>
             </div>
-
-
+        </div>
+        <div id="win" class="screen" style="display: none;">
+                <div class="menu">
+                    <h2 class="titulo">Você venceu!!!</h2>
+                    <img src="imagens/eagle.jpg" class="detale win_image" alt="">
+                    <button id="goToMenu">Voltar ao Menu</button>
+            </div>
         </div>
     </main>
+
     <script src="jogos/main.js" type="module"></script>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>

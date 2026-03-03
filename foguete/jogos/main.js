@@ -1,35 +1,54 @@
-
 class mainStats {
-    constructor(combustivel, temp) {
+    constructor(combustivel, temp, points, timeUntilDestruction) {
         this.combustivel = combustivel
         this.temp = temp
-        this.points = 0
+        this.points = points
         this.tankBroken = false
         this.tempBroken = false
-        this.timeUntilDestruction
+        this.timeUntilDestruction = timeUntilDestruction
     }
 }
 
-let stats = new mainStats(100, 10, 0, false, false, 30)
+let stats = new mainStats(100, 10, 0, 30)
 let interval = setInterval(decay, 1000)
 const info = document.getElementById("info")
 const tankAlarm = document.getElementById("tankAlarm")
 const tempAlarm = document.getElementById("tempAlarm")
 const sendInfoButton = document.getElementById("sendinfo")
 const fixTankButton = document.getElementById("fixTank")
-const fixTempButton =document.getElementById("fixTemp")
+const fixTempButton = document.getElementById("fixTemp")
 
 sendInfoButton.addEventListener('click', infoStart)
 fixTankButton.addEventListener('click', malfunctionTank)
 fixTempButton.addEventListener('click', malfunctionTemp)
+
+function goToMenu() {
+    clearInterval(interval)
+    stats.points = 0
+    stats.combustivel = 100
+    stats.temp = 30
+}
+
+export function setCTP(){
+    stats.points = 0
+    stats.combustivel = 100
+    stats.temp = 30
+    interval = setInterval(decay, 1000)
+}
 
 function decay() {
     stats.combustivel -= 1.5
     stats.temp += 1
     info.textContent = "C: " + stats.combustivel + " T: " + stats.temp + " P: " + stats.points
 
+    
+    if (stats.points >= 2) {// Vitoria
+        document.getElementById("win").style.display = "block";
+        document.getElementById("game").style.display = "none";
+        goToMenu()
+    }
     if (stats.combustivel == 25) {
-        tankAlarm.textContent = "!! GASOLINA REQUER REPAROS !!" 
+        tankAlarm.textContent = "!! GASOLINA REQUER REPAROS !!"
     }
     if (stats.combustivel <= 0) {
         tankAlarm.textContent = "!! GASOLINA EM NIVEL CRITICO !!"
@@ -39,14 +58,14 @@ function decay() {
     if (stats.temp == 100) {
         tempAlarm.textContent = "!! TEMPERATURA REQUER REPAROS !!"
     }
-    if (stats.temp >= 150) { 
+    if (stats.temp >= 150) {
         tempAlarm.textContent = "!! TEMPERATURA EM NIVEL CRITICO !!"
         stats.timeUntilDestruction -= 1
         info.textContent = "C: " + stats.combustivel + " T: " + stats.temp + " P: " + stats.points + " TEMPO ATÉ AUTODESTRUIÇÃO: " + stats.timeUntilDestruction
     }
-    if (stats.timeUntilDestruction == 0) {
-        info.textContent = "gg game over"
-        //jaoa mude as coisas aq se precisar de ajuda estou aq ok flw
+    if (stats.timeUntilDestruction <= 0) {
+        document.getElementById("menu").style.display = "none";
+        document.getElementById("game").style.display = "none";
     }
 }
 

@@ -31,6 +31,7 @@ header {
 
 .screen {
     display: flex;
+    height: 100vh;
     text-align: center;
     background-image: url(imagens/Inserir\ um\ pouquinho\ de\ texto.png);
     background-size: cover;
@@ -38,12 +39,12 @@ header {
     background-repeat: no-repeat;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
 }
 
 .menu {
     margin: 0;
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -97,7 +98,13 @@ button:hover {
     font-family: "Electrowave";
     color: #F7BD7C;
 }
-
+.win_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    border: 5px solid red;
+}
 .live_foguete {
     display: flex;
     justify-content: center;
@@ -114,6 +121,14 @@ button:hover {
     background-color: #A29687;
     border: 3px solid #F7BD7C;
     color: #F7BD7C;
+}
+.botaofinal{
+    font-family: "calculador";
+    background: none;
+    background-color: #A29687;
+    border: 3px solid #F7BD7C;
+    color: #F7BD7C;
+    height: 30vh;
 }
 
 @keyframes shake {
@@ -148,7 +163,6 @@ button:hover {
 }
 
 .centro {
-    position: relative;
     width: 100%;
     height: 100vh;
     /* animation: mudarCor 600s linear forwards; */
@@ -174,7 +188,7 @@ button:hover {
     src: url("fontes/calculator/deluxe.regular.ttf")
 }
 
-h1 {
+.titulo{
     font-family: "Electrowave";
     font-size: 100px;
     align-items: center;
