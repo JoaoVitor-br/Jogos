@@ -64,8 +64,10 @@ function decay() {
         info.textContent = "C: " + stats.combustivel + " T: " + stats.temp + " P: " + stats.points + " TEMPO ATÉ AUTODESTRUIÇÃO: " + stats.timeUntilDestruction
     }
     if (stats.timeUntilDestruction <= 0) {
-        document.getElementById("menu").style.display = "none";
-        document.getElementById("game").style.display = "none";
+        // document.getElementById("menu").style.display = "none";
+        // document.getElementById("game").style.display = "none";
+        info.textContent = "O foguete explodiu recomece"
+
     }
 }
 
