@@ -41,7 +41,7 @@ function startGame() {
 
 function goToMenu() {
     document.getElementById("game").style.display = "none";
-    document.getElementById("menu").style.display = "block";
+    document.getElementById("menu").style.display = "flex";
     document.getElementById("win").style.display = "none";
     document.querySelector("header").style.width = "100vw"
     document.querySelector("header").style.height = "100vh"

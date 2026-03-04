@@ -98,13 +98,15 @@ button:hover {
     font-family: "Electrowave";
     color: #F7BD7C;
 }
-.win_image{
+
+.win_image {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
     border: 5px solid red;
 }
+
 .live_foguete {
     display: flex;
     justify-content: center;
@@ -122,13 +124,37 @@ button:hover {
     border: 3px solid #F7BD7C;
     color: #F7BD7C;
 }
-.botaofinal{
+
+.botaofinal {
     font-family: "calculador";
     background: none;
     background-color: #A29687;
     border: 3px solid #F7BD7C;
     color: #F7BD7C;
     height: 30vh;
+}
+#imgderrota{
+    width: 23vw;
+    align-items: center;
+    justify-items: center;
+    background-image: url(imagens/espaco.png);
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    height: 42vh;
+}
+.flutuando{
+    animation: girar 2s linear infinite;
+    height: 40vh;
+}
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes shake {
@@ -188,7 +214,7 @@ button:hover {
     src: url("fontes/calculator/deluxe.regular.ttf")
 }
 
-.titulo{
+.titulo {
     font-family: "Electrowave";
     font-size: 100px;
     align-items: center;

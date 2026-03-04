@@ -17,6 +17,9 @@ const tempAlarm = document.getElementById("tempAlarm")
 const sendInfoButton = document.getElementById("sendinfo")
 const fixTankButton = document.getElementById("fixTank")
 const fixTempButton = document.getElementById("fixTemp")
+const finaltitulo = document.getElementById("titulofinal")
+const finaltext = document.getElementById("textfinal")
+const finalimg = document.getElementById("imgfinal")
 
 sendInfoButton.addEventListener('click', infoStart)
 fixTankButton.addEventListener('click', malfunctionTank)
@@ -29,7 +32,7 @@ function goToMenu() {
     stats.temp = 30
 }
 
-export function setCTP(){
+export function setCTP() {
     stats.points = 0
     stats.combustivel = 100
     stats.temp = 30
@@ -41,10 +44,13 @@ function decay() {
     stats.temp += 1
     info.textContent = "C: " + stats.combustivel + " T: " + stats.temp + " P: " + stats.points
 
-    
+
     if (stats.points >= 2) {// Vitoria
         document.getElementById("win").style.display = "block";
         document.getElementById("game").style.display = "none";
+        finaltitulo.textContent = "Voce venceu!!!"
+        finaltext.textContent = "Parabéns você guiou o foguete corretamen até o destino "
+        document.getElementById("imgvitoria").style.display = "block";
         goToMenu()
     }
     if (stats.combustivel == 25) {
@@ -64,9 +70,13 @@ function decay() {
         info.textContent = "C: " + stats.combustivel + " T: " + stats.temp + " P: " + stats.points + " TEMPO ATÉ AUTODESTRUIÇÃO: " + stats.timeUntilDestruction
     }
     if (stats.timeUntilDestruction <= 0) {
-        // document.getElementById("menu").style.display = "none";
-        // document.getElementById("game").style.display = "none";
-        info.textContent = "O foguete explodiu recomece"
+        document.getElementById("menu").style.display = "none";
+        document.getElementById("game").style.display = "none";
+        document.getElementById("win").style.display = "block";
+        finaltitulo.textContent = "Voce perdeu!!!"
+        finaltext.textContent = "Ocorreu algum erro que levou ao fim da missão"
+        document.getElementById("imgderrota").style.display = "flex";
+        document.getElementById("imgvitoria").style.display = "none";
 
     }
 }
