@@ -1,4 +1,4 @@
-import {setCTP} from "/jogos/main.js"
+import {setCTP} from "./jogos/main.js"
 
 let tempo = 0;
 let gameInterval;
