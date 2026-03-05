@@ -19,7 +19,6 @@ const fixTankButton = document.getElementById("fixTank")
 const fixTempButton = document.getElementById("fixTemp")
 const finaltitulo = document.getElementById("titulofinal")
 const finaltext = document.getElementById("textfinal")
-const finalimg = document.getElementById("imgfinal")
 
 sendInfoButton.addEventListener('click', infoStart)
 fixTankButton.addEventListener('click', malfunctionTank)

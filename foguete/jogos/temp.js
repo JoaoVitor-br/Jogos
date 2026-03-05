@@ -1,6 +1,6 @@
 const button = document.getElementById("button")
 const info = document.getElementById("info")
-let seconds = 15
+let seconds = 5
 let mousedown = false
 
 button.addEventListener("mousedown", () => {
@@ -14,7 +14,7 @@ let interval = setInterval(() => {
     if (mousedown == true) {
         seconds--
         console.log(seconds)
-    } else if (seconds < 15) {
+    } else if (seconds < 5) {
         seconds++
     }
     info.textContent = "Segure o botão abaixo por " + seconds + " segundos para esfriar a nave"

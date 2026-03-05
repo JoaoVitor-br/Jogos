@@ -1,7 +1,5 @@
 import {setCTP} from "./jogos/main.js"
 
-let tempo = 0;
-let gameInterval;
 // function abertura() {
 //     document.getElementById("menu").style.display = "none";
 //     document.getElementById("abertura").style.display = "block";
@@ -16,7 +14,6 @@ let gameInterval;
 
 
 // }
-console.log(tempo)
 
 document.getElementById("goToMenu").addEventListener("click", goToMenu)
 document.getElementById("startGame").addEventListener("click", startGame)
@@ -30,13 +27,6 @@ function startGame() {
     document.querySelector("header").style.height = "0vh"
 
     setCTP()
-    document.getElementById("tempo").innerText = tempo;
-
-    // Simulação de pontuação automática
-    gameInterval = setInterval(() => {
-        tempo++;
-        document.getElementById("tempo").innerText = tempo;
-    }, 1000);
 }
 
 function goToMenu() {
