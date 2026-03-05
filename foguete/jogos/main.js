@@ -45,7 +45,7 @@ function decay() {
     info.textContent = "C: " + stats.combustivel + " T: " + stats.temp + " P: " + stats.points
 
 
-    if (stats.points >= 2) {// Vitoria
+    if (stats.points >= 15) {// Vitoria
         document.getElementById("win").style.display = "block";
         document.getElementById("game").style.display = "none";
         finaltitulo.textContent = "Voce venceu!!!"
