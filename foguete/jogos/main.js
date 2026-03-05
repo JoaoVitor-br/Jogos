@@ -36,6 +36,8 @@ export function setCTP() {
     stats.combustivel = 100
     stats.temp = 30
     interval = setInterval(decay, 1000)
+    console.log("CPT foi ativo")
+    stats.timeUntilDestruction = 30
 }
 
 function decay() {
@@ -76,7 +78,7 @@ function decay() {
         finaltext.textContent = "Ocorreu algum erro que levou ao fim da missão"
         document.getElementById("imgderrota").style.display = "flex";
         document.getElementById("imgvitoria").style.display = "none";
-
+        goToMenu()
     }
 }
 
